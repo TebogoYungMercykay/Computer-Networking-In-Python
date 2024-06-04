@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                flex-direction: column;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            label {
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>{{ question.question }}</h1>
+        <form method="POST" action="/submit">
+            {% for choice in question.choices %}
+                <div class="choice">
+                    <input type="radio" id="answer{{ loop.index0 }}" name="answer" value="{{ loop.index0 }}">
+                    <label for="answer{{ loop.index0 }}">{{ choice }}</label>
+                </div>
+            {% endfor %}
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
