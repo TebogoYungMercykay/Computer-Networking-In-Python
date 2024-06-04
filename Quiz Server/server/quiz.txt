@@ -1,0 +1,29 @@
+?What protocol is commonly used for transferring files over the Internet?
++FTP
+-HTTP
+-SMTP
+-UDP
+
+?Which of the following is NOT an example of an application layer protocol?
+-SSH
++TCP
+-DNS
+-HTTP
+
+?Which protocol is used for sending and receiving emails?
+-FTP
++SMTP
+-SNMP
+-DHCP
+
+?Which protocol is used for sending and receiving emails?
+-FTP
+-TCP
+-SNMP
+-DHCP
+
+?Which Port(s) does FTP use for communication
+-23
++20
++21
+-587
