@@ -1,0 +1,38 @@
+To create the files and directories on your FTP server, you can use an FTP client. Here's how you can do it using the `ftp` command in the terminal:
+
+1. Connect to the FTP server:
+
+```bash
+ftp -p localhost 21
+```
+
+2. Log in with your username and password:
+
+```bash
+Name (localhost:yourusername): test
+Password: test12345_
+```
+
+3. Create the `/toxic/` directory:
+
+```bash
+mkdir /toxic
+```
+
+4. Create the `/Known_good.txt` file. FTP doesn't directly support creating files, so you'll need to upload a local file:
+
+```bash
+put localfile /Known_good.txt
+put Known_good.txt.tmp Known_good.txt.tmp
+put Known_good.txt.hash.tmp Known_good.txt.hash.tmp
+```
+
+Replace `localfile` with the path of a local file. This will create a file on the server at `/Known_good.txt` with the content of `localfile`.
+
+5. Exit the FTP client:
+
+```bash
+bye
+```
+
+Please note that you need to have the necessary permissions to create files and directories on the server. If you encounter any permission issues, you may need to adjust the server settings or file permissions.
