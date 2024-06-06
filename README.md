@@ -21,7 +21,7 @@ Welcome to the Project Repository! This repository contains a collection of proj
 
 ## Projects
 
-### CGI Script on the Web
+#### CGI Script on the Web
 
 This project demonstrates how to deploy CGI scripts on the web. It includes examples and guidelines for creating and executing CGI scripts to generate dynamic web content.
 
@@ -32,7 +32,7 @@ This project demonstrates how to deploy CGI scripts on the web. It includes exam
   - Deployment instructions
   - Security best practices
 
-### CGI Scripts
+#### CGI Scripts
 
 A collection of CGI scripts designed for various purposes. This folder contains scripts that can be used to handle form data, generate web content dynamically, and more.
 
@@ -43,7 +43,7 @@ A collection of CGI scripts designed for various purposes. This folder contains 
   - Form handling
   - Data processing
 
-### FTP Server
+#### FTP Server
 
 An implementation of an FTP server that allows file transfers over the network. This project includes the setup and configuration of the server.
 
@@ -54,7 +54,7 @@ An implementation of an FTP server that allows file transfers over the network. 
   - User authentication
   - File upload/download
 
-### LDAP Client
+#### LDAP Client
 
 This project provides an LDAP client implementation that can connect to LDAP servers, perform searches, and retrieve directory information.
 
@@ -65,7 +65,7 @@ This project provides an LDAP client implementation that can connect to LDAP ser
   - Search and retrieval operations
   - Example usage scripts
 
-### POP3 Client+Proxy
+#### POP3 Client+Proxy
 
 A combined project that includes both a POP3 client and a proxy server. The client connects to POP3 email servers, and the proxy server can be used to relay email traffic.
 
@@ -76,7 +76,7 @@ A combined project that includes both a POP3 client and a proxy server. The clie
   - Proxy functionality
   - Email retrieval and forwarding
 
-### POP3 Server
+#### POP3 Server
 
 An implementation of a POP3 server that allows clients to connect and retrieve emails from the server.
 
@@ -87,7 +87,7 @@ An implementation of a POP3 server that allows clients to connect and retrieve e
   - User authentication
   - Email storage and retrieval
 
-### Quiz Server
+#### Quiz Server
 
 A server application that hosts quizzes, allowing users to connect, take quizzes, and receive scores.
 
@@ -98,7 +98,7 @@ A server application that hosts quizzes, allowing users to connect, take quizzes
   - User interaction
   - Scoring system
 
-### Quiz Web Server
+#### Quiz Web Server
 
 A web-based quiz server that presents quizzes to users through a web interface. Users can take quizzes and view their results online.
 
@@ -109,7 +109,7 @@ A web-based quiz server that presents quizzes to users through a web interface. 
   - Interactive quizzes
   - Real-time scoring
 
-### SMTP Server
+#### SMTP Server
 
 An implementation of an SMTP server that can send and receive email messages.
 
