@@ -122,7 +122,7 @@ An implementation of an SMTP server that can send and receive email messages.
 
 ## Documentation
 
-The `_docs` folder contains detailed documentation for each project, including setup instructions, usage guidelines, and API references.
+The `_docs` folder contains detailed summaies for each layer in the OSI ISO Reference Model.
 
 - **Location**: `_docs/`
 
