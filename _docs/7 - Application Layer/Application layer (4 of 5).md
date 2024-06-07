@@ -20,6 +20,15 @@ Network management protocols are used to manage, configure, and monitor network 
 4. **ICMP (Internet Control Message Protocol):**
    - **Description:** Used by network devices, like routers, to send error messages and operational information indicating success or failure when communicating with another IP address.
    - **Example:** The 'ping' command uses ICMP to check the reachability of a host on an IP network.
+      - It measures the round-trip time for messages sent from the originating host to a destination computer and provides information about the operational status and speed of transmission of the network.
+      ```ping www.example.com```
+      - This command sends a series of packets to the domain `www.example.com` and gives output showing if the packets were successfully received and how long each packet took to make the round trip.
+      - You can also use the ping command with an IP address:
+      ```ping 192.168.1.1```
+      - This command sends packets to the device with the IP address 192.168.1.1.
+      - There are various options you can use with the `ping` command to customize its behavior. For example, to limit the number of pings to 4, you can use the `-c` option:
+      ```ping -c 4 www.example.com```
+      - This command will only send 4 packets to `www.example.com`.
 
 ## Role of Network Management Protocols
 
