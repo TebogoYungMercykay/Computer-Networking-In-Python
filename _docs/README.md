@@ -102,6 +102,9 @@ The Application Layer is the closest layer to the end user and interacts with so
   - HTTP/HTTPS
   - FTP
   - SMTP
+- **YouTube Playlist**:
+  - [NetworkProf](https://youtube.com/playlist?list=PLtjT6PTtgrGZCJMMQdti2AQa85P8LQIWy&feature=shared)
+  - [Engineering Funda](https://www.youtube.com/watch?v=hOEj_0GFh2g&list=PLgwJf8NK-2e5utf4e5VJCEeNTDFtKHgsF)
 
 ## Practicals Specifications
 

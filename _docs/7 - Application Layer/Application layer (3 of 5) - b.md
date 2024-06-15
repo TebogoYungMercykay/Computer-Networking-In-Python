@@ -49,11 +49,14 @@ Let's consider a simple network graph where the vertices represent routers and t
 
 #### Network Graph
 ```
-  A --4--> B
+  A----4--- B
   | \     / |
   1   2  3  -2
-  |     X   |
-  C <--6-- D
+  |    X    |
+  |   / \   |
+  |  /   \  |
+  | /     \ |
+  C----6----D
 ```
 
 1. **Initialization:**
@@ -69,20 +72,22 @@ Let's consider a simple network graph where the vertices represent routers and t
 
 3. **Repeat Edge Relaxation:**
    - Visit B's neighbors: 
-     - Distance to D through B = 1 (B:4 + B→D:-2)
-     - Updated distances: A:0, B:4, C:1, D:1
-   - Visit C's neighbors (no shorter paths found)
+     - Distance to D through B = 2 (B:4 + B→D:-2)
+     - Update teh distace to D throough B.
+   - Visit C's neighbors:
+     - Distance to D through C = 7 (C:1 + C→D:6)
+     - Do not update.
    - Visit D's neighbors:
-     - Distance to B through D = 3 (D:1 + D→B:3)
-     - Updated distances: A:0, B:3, C:1, D:1
+     - Distance to B through D = 0 (D:2 + D→B:-2)
+   - Updated distances: A:0, B:0, C:1, D:2
 
 4. **Check for Negative-Weight Cycles:**
    - After the 4th iteration (in a graph with 4 vertices), if any distance is still updated, it indicates a negative-weight cycle.
    - No further updates indicate there are no negative-weight cycles.
 
 **Final Shortest Paths:**
-- A to B: 3
+- A to B: 0
 - A to C: 1
-- A to D: 1
+- A to D: 2
 
 The Bellman-Ford algorithm ensures that even in the presence of negative edge weights, the shortest paths can be accurately determined, which is crucial for the reliability and efficiency of network routing protocols. Understanding and implementing it correctly can significantly enhance network performance and data transmission reliability.
