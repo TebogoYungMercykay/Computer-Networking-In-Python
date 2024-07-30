@@ -2,7 +2,7 @@ import socket
 
 # Connect to the LDAP server
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(('localhost', 389))
+sock.connect(("localhost", 389))
 
 # Construct the LDAP search request
 request = ...
