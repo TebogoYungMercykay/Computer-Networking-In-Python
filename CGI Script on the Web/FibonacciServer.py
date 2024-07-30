@@ -2,6 +2,7 @@ import socket
 
 # Authors: Tshegofatso Mapheto and Sello Selepe
 
+
 # Function to read Fibonacci numbers from file
 def read_fibonacci_numbers():
     try:
@@ -13,6 +14,7 @@ def read_fibonacci_numbers():
     except IOError:
         return "Error reading Fibonacci file!"
 
+
 # Function to update Fibonacci numbers in file
 def update_fibonacci_numbers(new_numbers):
     try:
@@ -22,11 +24,12 @@ def update_fibonacci_numbers(new_numbers):
     except IOError:
         return None
 
+
 # Function to generate HTML content based on Fibonacci sequence
 def generate_html_content(fibonacci_content):
     if fibonacci_content is None:
         fibonacci_content = "Fibonacci sequence is not available."
-    
+
     fib_array = list(map(int, fibonacci_content.split(",")))
 
     # Check if the sequence is at 0, 1, 1 to disable "Previous" button
@@ -58,8 +61,11 @@ def generate_html_content(fibonacci_content):
         </div>
     </body>
     </html>
-    """.format(fibonacci_content, 'disabled' if disable_previous else '')
+    """.format(
+        fibonacci_content, "disabled" if disable_previous else ""
+    )
     return html_content
+
 
 # Function to handle client requests
 def handle_request(client_socket):
@@ -76,13 +82,15 @@ def handle_request(client_socket):
             client_socket.sendall(response.encode())
         elif request_method == "POST":
             post_data = request_lines[-1]
-            
+
             if "previous" in post_data:
                 fibonacci_content = read_fibonacci_numbers()
                 fib_array = list(map(int, fibonacci_content.split(",")))
                 new_first = fib_array[1] - fib_array[0]
-                updated_content = update_fibonacci_numbers("{},{},{}".format(new_first, fib_array[0], fib_array[1]))
-                
+                updated_content = update_fibonacci_numbers(
+                    "{},{},{}".format(new_first, fib_array[0], fib_array[1])
+                )
+
                 if updated_content:
                     response = "HTTP/1.1 200 OK\r\n"
                     response += "Content-Type: text/html\r\n\r\n"
@@ -96,9 +104,11 @@ def handle_request(client_socket):
                 fib_array = list(map(int, fibonacci_content.split(",")))
                 new_first = fib_array[1]
                 new_second = fib_array[2]
-                new_third = fib_array[1] + fib_array[2] #"fib_array[0] + "
-                updated_content = update_fibonacci_numbers("{},{},{}".format(new_first, new_second, new_third))
-                
+                new_third = fib_array[1] + fib_array[2]  # "fib_array[0] + "
+                updated_content = update_fibonacci_numbers(
+                    "{},{},{}".format(new_first, new_second, new_third)
+                )
+
                 if updated_content:
                     response = "HTTP/1.1 200 OK\r\n"
                     response += "Content-Type: text/html\r\n\r\n"
@@ -111,7 +121,7 @@ def handle_request(client_socket):
                 response = "HTTP/1.1 400 Bad Request\r\n"
                 response += "Content-Type: text/html; charset=utf-8\r\n\r\n"
                 response += "Bad Request."
-            
+
             client_socket.sendall(response.encode())
 
         client_socket.close()
@@ -122,9 +132,10 @@ def handle_request(client_socket):
         client_socket.sendall(response.encode())
         client_socket.close()
 
+
 # Main function to run the server
 def main():
-    host = 'localhost'
+    host = "localhost"
     port = 55555
 
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -138,6 +149,7 @@ def main():
         handle_request(client_socket)
 
     server_socket.close()
+
 
 if __name__ == "__main__":
     main()

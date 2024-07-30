@@ -3,8 +3,10 @@ import random
 import re
 from threading import Thread
 
+
 def wrap_text(text, width):
-    return "<br>".join([text[i:i + width] for i in range(0, len(text), width)])
+    return "<br>".join([text[i : i + width] for i in range(0, len(text), width)])
+
 
 def load_quiz(filename):
     quiz = []
@@ -19,14 +21,15 @@ def load_quiz(filename):
                     "question": line[1:].strip(),
                     "choices": [],
                     "correct": None,
-                    "user_answer": None
+                    "user_answer": None,
                 }
             elif line.startswith("-") or line.startswith("+"):
                 if line.startswith("+"):
-                    question["correct"] = chr(ord('A') + len(question["choices"]))
+                    question["correct"] = chr(ord("A") + len(question["choices"]))
                 question["choices"].append(line[1:].strip())
     random.shuffle(quiz)  # Shuffle the quiz questions
     return quiz
+
 
 def generate_html_content(question, choices, score, total_questions, num_answered):
     wrapped_question = wrap_text(question, 80)
@@ -89,6 +92,7 @@ def generate_html_content(question, choices, score, total_questions, num_answere
     """
     return html_content
 
+
 def handle_client(client_socket, question_data, quiz, user_scores):
     try:
         request = client_socket.recv(1024).decode()
@@ -100,7 +104,9 @@ def handle_client(client_socket, question_data, quiz, user_scores):
             choices = question_data["choices"]
             current_score = sum(user_scores)
             total_questions = len(quiz)
-            html_content = generate_html_content(question, choices, current_score, total_questions, len(user_scores))
+            html_content = generate_html_content(
+                question, choices, current_score, total_questions, len(user_scores)
+            )
             response = "HTTP/1.1 200 OK\r\n"
             response += "Content-Type: text/html\r\n\r\n"
             response += html_content
@@ -128,10 +134,14 @@ def handle_client(client_socket, question_data, quiz, user_scores):
                 choices = question_data["choices"]
                 current_score = sum(user_scores)
                 total_questions = len(quiz)
-                html_content = generate_html_content(question, choices, current_score, total_questions, len(user_scores))
+                html_content = generate_html_content(
+                    question, choices, current_score, total_questions, len(user_scores)
+                )
                 response = "HTTP/1.1 200 OK\r\n"
                 response += "Content-Type: text/html\r\n\r\n"
-                response += html_content.replace('<div class="question">', f'<div class="question {feedback_class}">').replace('<input type="submit" name="action" value="Submit">', '')
+                response += html_content.replace(
+                    '<div class="question">', f'<div class="question {feedback_class}">'
+                ).replace('<input type="submit" name="action" value="Submit">', "")
                 client_socket.sendall(response.encode())
 
             else:
@@ -163,12 +173,15 @@ def handle_client(client_socket, question_data, quiz, user_scores):
     finally:
         client_socket.close()
 
+
 def start_server(port, quiz):
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind(('localhost', port))
+    server_socket.bind(("localhost", port))
     server_socket.listen()
 
-    print(f"Server started on port {port}. Open http://localhost:{port} to take the quiz.")
+    print(
+        f"Server started on port {port}. Open http://localhost:{port} to take the quiz."
+    )
 
     question_data = None
     user_scores = [0] * len(quiz)
@@ -180,8 +193,11 @@ def start_server(port, quiz):
         if question_data is None:  # Start with the first question
             question_data = quiz[0]
 
-        client_thread = Thread(target=handle_client, args=(client_socket, question_data, quiz, user_scores))
+        client_thread = Thread(
+            target=handle_client, args=(client_socket, question_data, quiz, user_scores)
+        )
         client_thread.start()
+
 
 if __name__ == "__main__":
     quiz = load_quiz("quiz.txt")
