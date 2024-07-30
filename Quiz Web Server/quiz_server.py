@@ -5,8 +5,9 @@ from threading import Thread
 
 QUIZ_LEN = 3
 
+
 def wrap_text(text, width):
-    return "<br>".join([text[i:i + width] for i in range(0, len(text), width)])
+    return "<br>".join([text[i : i + width] for i in range(0, len(text), width)])
 
 
 def load_quiz(filename):
@@ -22,15 +23,15 @@ def load_quiz(filename):
                     "question": line[1:].strip(),
                     "choices": [],
                     "correct": None,
-                    "user_answer": None  # Add a field to store user's answer
+                    "user_answer": None,  # Add a field to store user's answer
                 }
             elif line.startswith("-") or line.startswith("+"):
                 if line.startswith("+"):
-                    question["correct"] = chr(ord('A') + len(question["choices"]))
+                    question["correct"] = chr(ord("A") + len(question["choices"]))
                 question["choices"].append(line[1:].strip())
         if question:
             quiz.append(question)
-    
+
     return quiz
 
 
@@ -160,10 +161,10 @@ def handle_client(client_socket, question_data, user_answers, scores):
                 user_answer = answer_match.group(1)
                 user_answers.append(user_answer)
                 correct_answer = question_data["correct"]
-                
+
                 if user_answer == correct_answer:
                     result = "Congratulations! Your answer is correct."
-                    scores[0] += 1 
+                    scores[0] += 1
                 else:
                     result = f"Incorrect. The correct answer was {correct_answer}."
 
@@ -187,24 +188,29 @@ def handle_client(client_socket, question_data, user_answers, scores):
                         print("Error sending response:", e)
     finally:
         client_socket.close()
-        
+
 
 def start_server(port, quiz):
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind(('localhost', port))
+    server_socket.bind(("localhost", port))
     server_socket.listen()
 
-    print(f"Server started on port {port}.\nOpen http://localhost:{port} to take the quiz.")
+    print(
+        f"Server started on port {port}.\nOpen http://localhost:{port} to take the quiz."
+    )
 
-    user_answers = [] 
+    user_answers = []
     scores = [0]
     while True:
-        if len(user_answers) == len(quiz): 
+        if len(user_answers) == len(quiz):
             break
         else:
             client_socket, addr = server_socket.accept()
             random_question = random.choice(quiz)
-            client_thread = Thread(target=handle_client, args=(client_socket, random_question, user_answers, scores))
+            client_thread = Thread(
+                target=handle_client,
+                args=(client_socket, random_question, user_answers, scores),
+            )
             client_thread.start()
 
     total_questions = len(quiz)
@@ -217,7 +223,7 @@ def start_server(port, quiz):
 
 
 def main():
-    host = 'localhost'
+    host = "localhost"
     port = 55555
     quiz = load_quiz("quiz.txt")
     start_server(port, quiz)
