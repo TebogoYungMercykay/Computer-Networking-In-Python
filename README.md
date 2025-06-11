@@ -10,64 +10,55 @@ This repository contains a collection of projects focusing on different server a
 
 ## Components
 
-**CGI Script on the Web/**  
-Demonstrates how to deploy CGI scripts on the web, including examples and guidelines for generating dynamic web content.  
+**CGI Script on the Web/** - Demonstrates how to deploy CGI scripts on the web, including examples and guidelines for generating dynamic web content.  
 **Languages:** Python, Perl  
 - Basic CGI script examples  
 - Deployment instructions  
 - Security best practices  
 
-**CGI Scripts/**  
-A collection of CGI scripts for handling form data and generating dynamic web content.  
+**CGI Scripts/** - A collection of CGI scripts for handling form data and generating dynamic web content.  
 **Languages:** Python, Perl  
 - Multiple script examples  
 - Form handling  
 - Data processing  
 
-**FTP Server/**  
-Implementation of an FTP server supporting file transfers, user authentication, and configuration.  
+**FTP Server/** - Implementation of an FTP server supporting file transfers, user authentication, and configuration.  
 **Languages:** Python  
 - FTP protocol implementation  
 - User authentication  
 - File upload/download  
 
-**LDAP Client/**  
-LDAP client implementation for connecting to LDAP servers, performing searches, and retrieving directory information.  
+**LDAP Client/** - LDAP client implementation for connecting to LDAP servers, performing searches, and retrieving directory information.  
 **Languages:** Python  
 - LDAP server connection  
 - Search and retrieval operations  
 - Example usage scripts  
 
-**POP3 Client+Proxy/**  
-Combined POP3 client and proxy server for connecting to POP3 email servers and relaying email traffic.  
+**POP3 Client+Proxy/** - Combined POP3 client and proxy server for connecting to POP3 email servers and relaying email traffic.  
 **Languages:** Python  
 - POP3 protocol implementation  
 - Proxy functionality  
 - Email retrieval and forwarding  
 
-**POP3 Server/**  
-POP3 server implementation allowing clients to connect and retrieve emails.  
+**POP3 Server/** - POP3 server implementation allowing clients to connect and retrieve emails.  
 **Languages:** Python  
 - POP3 protocol support  
 - User authentication  
 - Email storage and retrieval  
 
-**Quiz Server/**  
-Server application for hosting quizzes, enabling user interaction and scoring.  
+**Quiz Server/** - Server application for hosting quizzes, enabling user interaction and scoring.  
 **Languages:** Python  
 - Quiz hosting  
 - User interaction  
 - Scoring system  
 
-**Quiz Web Server/**  
-Web-based quiz server presenting quizzes through a web interface with real-time scoring.  
+**Quiz Web Server/** - Web-based quiz server presenting quizzes through a web interface with real-time scoring.  
 **Languages:** Python, HTML, JavaScript  
 - Web-based interface  
 - Interactive quizzes  
 - Real-time scoring  
 
-**SMTP Server/**  
-SMTP server implementation for sending and receiving email messages.  
+**SMTP Server/** - SMTP server implementation for sending and receiving email messages.  
 **Languages:** Python  
 - SMTP protocol support  
 - Email sending/receiving  
@@ -75,9 +66,9 @@ SMTP server implementation for sending and receiving email messages.
 
 ## Notes
 
-The `_docs` folder contains detailed summaies for each layer in the OSI ISO Reference Model, It also contains the specification for these projects, basically the practical specification.
+The `docs` folder contains detailed summaies for each layer in the OSI ISO Reference Model, It also contains the specification for these projects, basically the practical specification.
 
-- **Location**: `_docs/`
+- **Location**: `docs/`
 
 ## Protocol Coverage
 
