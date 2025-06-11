@@ -73,7 +73,7 @@ This repository contains a collection of projects focusing on different server a
 - User authentication 
 - **Languages:** Python  
 
-## Notes
+## ISO-OSI Layers Notes
 
 The `docs` folder contains detailed summaies for each layer in the OSI ISO Reference Model, It also contains the specification for these projects, basically the practical specification.
 
