@@ -1,135 +1,106 @@
-# Computer Networking In Python (COS332)
+# Computer Networking: Network Protocols Implementation
 
-Welcome to the Project Repository! This repository contains a collection of projects focusing on different server and client implementations, including CGI scripts, FTP, LDAP, POP3, SMTP servers, and more. Below is an overview of each project contained in this repository.
+<img src="images/readme.jpg" style="width: 100%; height: 40%;" />
 
-## Table of Contents
+A comprehensive collection of network protocol implementations and server applications built from scratch to demonstrate core networking concepts and server-side programming.
 
-- [Projects](#projects)
-  - [CGI Script on the Web](#cgi-script-on-the-web)
-  - [CGI Scripts](#cgi-scripts)
-  - [FTP Server](#ftp-server)
-  - [LDAP Client](#ldap-client)
-  - [POP3 Client+Proxy](#pop3-clientproxy)
-  - [POP3 Server](#pop3-server)
-  - [Quiz Server](#quiz-server)
-  - [Quiz Web Server](#quiz-web-server)
-  - [SMTP Server](#smtp-server)
-- [Documentation](#documentation)
-- [License](#license)
-- [Contributing](#contributing)
-- [Contact](#contact)
+## Overview
 
-## Projects
+This repository contains a collection of projects focusing on different server and client implementations, including CGI scripts, FTP, LDAP, POP3, SMTP servers, and more. Below is an overview of each project contained in this repository.
 
-#### CGI Script on the Web
+## Components
 
-This project demonstrates how to deploy CGI scripts on the web. It includes examples and guidelines for creating and executing CGI scripts to generate dynamic web content.
+**CGI Script on the Web/**  
+Demonstrates how to deploy CGI scripts on the web, including examples and guidelines for generating dynamic web content.  
+**Languages:** Python, Perl  
+- Basic CGI script examples  
+- Deployment instructions  
+- Security best practices  
 
-- **Location**: `CGI Script on the Web/`
-- **Languages**: Python, Perl
-- **Key Features**: 
-  - Basic CGI script examples
-  - Deployment instructions
-  - Security best practices
+**CGI Scripts/**  
+A collection of CGI scripts for handling form data and generating dynamic web content.  
+**Languages:** Python, Perl  
+- Multiple script examples  
+- Form handling  
+- Data processing  
 
-#### CGI Scripts
+**FTP Server/**  
+Implementation of an FTP server supporting file transfers, user authentication, and configuration.  
+**Languages:** Python  
+- FTP protocol implementation  
+- User authentication  
+- File upload/download  
 
-A collection of CGI scripts designed for various purposes. This folder contains scripts that can be used to handle form data, generate web content dynamically, and more.
+**LDAP Client/**  
+LDAP client implementation for connecting to LDAP servers, performing searches, and retrieving directory information.  
+**Languages:** Python  
+- LDAP server connection  
+- Search and retrieval operations  
+- Example usage scripts  
 
-- **Location**: `CGI Scripts/`
-- **Languages**: Python, Perl
-- **Key Features**: 
-  - Multiple script examples
-  - Form handling
-  - Data processing
+**POP3 Client+Proxy/**  
+Combined POP3 client and proxy server for connecting to POP3 email servers and relaying email traffic.  
+**Languages:** Python  
+- POP3 protocol implementation  
+- Proxy functionality  
+- Email retrieval and forwarding  
 
-#### FTP Server
+**POP3 Server/**  
+POP3 server implementation allowing clients to connect and retrieve emails.  
+**Languages:** Python  
+- POP3 protocol support  
+- User authentication  
+- Email storage and retrieval  
 
-An implementation of an FTP server that allows file transfers over the network. This project includes the setup and configuration of the server.
+**Quiz Server/**  
+Server application for hosting quizzes, enabling user interaction and scoring.  
+**Languages:** Python  
+- Quiz hosting  
+- User interaction  
+- Scoring system  
 
-- **Location**: `FTP Server/`
-- **Languages**: Python
-- **Key Features**: 
-  - FTP protocol implementation
-  - User authentication
-  - File upload/download
+**Quiz Web Server/**  
+Web-based quiz server presenting quizzes through a web interface with real-time scoring.  
+**Languages:** Python, HTML, JavaScript  
+- Web-based interface  
+- Interactive quizzes  
+- Real-time scoring  
 
-#### LDAP Client
+**SMTP Server/**  
+SMTP server implementation for sending and receiving email messages.  
+**Languages:** Python  
+- SMTP protocol support  
+- Email sending/receiving  
+- User authentication  
 
-This project provides an LDAP client implementation that can connect to LDAP servers, perform searches, and retrieve directory information.
-
-- **Location**: `LDAP Client/`
-- **Languages**: Python
-- **Key Features**: 
-  - LDAP server connection
-  - Search and retrieval operations
-  - Example usage scripts
-
-#### POP3 Client+Proxy
-
-A combined project that includes both a POP3 client and a proxy server. The client connects to POP3 email servers, and the proxy server can be used to relay email traffic.
-
-- **Location**: `POP3 Client+Proxy/`
-- **Languages**: Python
-- **Key Features**: 
-  - POP3 protocol implementation
-  - Proxy functionality
-  - Email retrieval and forwarding
-
-#### POP3 Server
-
-An implementation of a POP3 server that allows clients to connect and retrieve emails from the server.
-
-- **Location**: `POP3 Server/`
-- **Languages**: Python
-- **Key Features**: 
-  - POP3 protocol support
-  - User authentication
-  - Email storage and retrieval
-
-#### Quiz Server
-
-A server application that hosts quizzes, allowing users to connect, take quizzes, and receive scores.
-
-- **Location**: `Quiz Server/`
-- **Languages**: Python
-- **Key Features**: 
-  - Quiz hosting
-  - User interaction
-  - Scoring system
-
-#### Quiz Web Server
-
-A web-based quiz server that presents quizzes to users through a web interface. Users can take quizzes and view their results online.
-
-- **Location**: `Quiz Web Server/`
-- **Languages**: Python, HTML, JavaScript
-- **Key Features**: 
-  - Web-based interface
-  - Interactive quizzes
-  - Real-time scoring
-
-#### SMTP Server
-
-An implementation of an SMTP server that can send and receive email messages.
-
-- **Location**: `SMTP Server/`
-- **Languages**: Python
-- **Key Features**: 
-  - SMTP protocol support
-  - Email sending/receiving
-  - User authentication
-
-## Documentation
+## Notes
 
 The `_docs` folder contains detailed summaies for each layer in the OSI ISO Reference Model, It also contains the specification for these projects, basically the practical specification.
 
 - **Location**: `_docs/`
 
-## License
+## Protocol Coverage
 
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+- HTTP/1.1 with CGI support
+- FTP with active/passive modes
+- SMTP for email transmission
+- POP3 for email retrieval
+- LDAP for directory services
+- Telnet for remote terminal access
+- PROXY for the POP3 client
 
-## Contributing
+## Security Notice
 
-Contributions are welcome! Please fork this repository and submit pull requests for any improvements or bug fixes.
+These implementations are designed for educational purposes and protocol understanding. They may not include production-level security features.
+
+## Credits
+
+- [NetworkProf](https://youtube.com/playlist?list=PLtjT6PTtgrGZCJMMQdti2AQa85P8LQIWy&feature=shared)
+- [Engineering Funda](https://www.youtube.com/watch?v=hOEj_0GFh2g&list=PLgwJf8NK-2e5utf4e5VJCEeNTDFtKHgsF)
+- [Feduguide](https://eduguide.co.in/what-are-the-4-main-types-of-computer-networks)
+
+Feel free to explore the notes and practicals to enhance your understanding of the OSI model and its applications in real-world networking scenarios. For any questions or further clarifications, please refer to the contact section in the main repository README file.
+
+---
+
+---
