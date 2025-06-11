@@ -10,59 +10,68 @@ This repository contains a collection of projects focusing on different server a
 
 ## Components
 
-**CGI Script on the Web/** - Demonstrates how to deploy CGI scripts on the web, including examples and guidelines for generating dynamic web content.  
-**Languages:** Python, Perl  
+**CGI Script on the Web** - (`src/cgi-web-demo`)
+- Demonstrates how to deploy CGI scripts on the web, including examples and guidelines for generating dynamic web content.  
 - Basic CGI script examples  
 - Deployment instructions  
 - Security best practices  
+- **Languages:** Python, Perl  
 
-**CGI Scripts/** - A collection of CGI scripts for handling form data and generating dynamic web content.  
-**Languages:** Python, Perl  
+**CGI Scripts** - (`src/cgi-scripts`)
+- A collection of CGI scripts for handling form data and generating dynamic web content.  
 - Multiple script examples  
 - Form handling  
 - Data processing  
+- **Languages:** Python, Perl  
 
-**FTP Server/** - Implementation of an FTP server supporting file transfers, user authentication, and configuration.  
-**Languages:** Python  
+**FTP Server** - (`src/ftp-server`)
+- Implementation of an FTP server supporting file transfers, user authentication, and configuration.  
 - FTP protocol implementation  
 - User authentication  
 - File upload/download  
+- **Languages:** Python  
 
-**LDAP Client/** - LDAP client implementation for connecting to LDAP servers, performing searches, and retrieving directory information.  
-**Languages:** Python  
+**LDAP Client** - (`src/ldap-client`)
+- LDAP client implementation for connecting to LDAP servers, performing searches, and retrieving directory information.  
 - LDAP server connection  
 - Search and retrieval operations  
 - Example usage scripts  
+- **Languages:** Python  
 
-**POP3 Client+Proxy/** - Combined POP3 client and proxy server for connecting to POP3 email servers and relaying email traffic.  
-**Languages:** Python  
+**POP3 Client+Proxy** - (`src/pop3-client-proxy`)
+- Combined POP3 client and proxy server for connecting to POP3 email servers and relaying email traffic.  
 - POP3 protocol implementation  
 - Proxy functionality  
 - Email retrieval and forwarding  
+- **Languages:** Python  
 
-**POP3 Server/** - POP3 server implementation allowing clients to connect and retrieve emails.  
-**Languages:** Python  
+**POP3 Server** - (`src/pop3-server`)
+- POP3 server implementation allowing clients to connect and retrieve emails.  
 - POP3 protocol support  
 - User authentication  
 - Email storage and retrieval  
+- **Languages:** Python  
 
-**Quiz Server/** - Server application for hosting quizzes, enabling user interaction and scoring.  
-**Languages:** Python  
+**Quiz Server** - (`src/quiz-server`)
+- Server application for hosting quizzes, enabling user interaction and scoring.  
 - Quiz hosting  
 - User interaction  
 - Scoring system  
+- **Languages:** Python  
 
-**Quiz Web Server/** - Web-based quiz server presenting quizzes through a web interface with real-time scoring.  
-**Languages:** Python, HTML, JavaScript  
+**Quiz Web Server** - (`src/quiz-web-server`)
+- Web-based quiz server presenting quizzes through a web interface with real-time scoring.  
 - Web-based interface  
 - Interactive quizzes  
 - Real-time scoring  
+- **Languages:** Python, HTML, JavaScript  
 
-**SMTP Server/** - SMTP server implementation for sending and receiving email messages.  
-**Languages:** Python  
+**SMTP Server** - (`src/smtp-server`)
+- SMTP server implementation for sending and receiving email messages.  
 - SMTP protocol support  
 - Email sending/receiving  
-- User authentication  
+- User authentication 
+- **Languages:** Python  
 
 ## Notes
 
