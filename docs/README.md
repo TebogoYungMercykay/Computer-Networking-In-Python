@@ -1,18 +1,20 @@
-# _docs Directory
+# docs Directory
 
-Welcome to the `_docs` directory! This directory contains comprehensive notes on the OSI model layers and detailed specifications for practical exercises. Below is an overview of the contents in this directory.
+Welcome to the `docs` directory! This directory contains comprehensive notes on the OSI model layers and detailed specifications for practical exercises. Below is an overview of the contents in this directory.
 
 ## Table of Contents
 
-- [Notes on OSI Model Layers](#notes-on-osi-model-layers)
-  - [1 - Physical Layer](#1---physical-layer)
-  - [2 - Data Link Layer](#2---data-link-layer)
-  - [3 - Network Layer](#3---network-layer)
-  - [4 - Transport Layer](#4---transport-layer)
-  - [5 - Session Layer](#5---session-layer)
-  - [6 - Presentation Layer](#6---presentation-layer)
-  - [7 - Application Layer](#7---application-layer)
-- [Practicals Specifications](#practicals-specifications)
+- [docs Directory](#docs-directory)
+  - [Table of Contents](#table-of-contents)
+  - [Notes on OSI Model Layers](#notes-on-osi-model-layers)
+    - [1 - Physical Layer](#1---physical-layer)
+    - [2 - Data Link Layer](#2---data-link-layer)
+    - [3 - Network Layer](#3---network-layer)
+    - [4 - Transport Layer](#4---transport-layer)
+    - [5 - Session Layer](#5---session-layer)
+    - [6 - Presentation Layer](#6---presentation-layer)
+    - [7 - Application Layer](#7---application-layer)
+  - [Practicals Specifications](#practicals-specifications)
 
 ## Notes on OSI Model Layers
 
@@ -20,11 +22,11 @@ Welcome to the `_docs` directory! This directory contains comprehensive notes on
 
 The Physical Layer is the first layer of the OSI model and is responsible for the physical connection between devices. It deals with the transmission and reception of raw bit streams over a physical medium such as cables, fiber optics, or wireless.
 
-- **Functions**: 
+- **Functions**:
   - Bit-by-bit delivery
   - Modulation and demodulation
   - Signal transmission and reception
-- **Components**: 
+- **Components**:
   - Network cables
   - Hubs
   - Repeaters
@@ -33,11 +35,11 @@ The Physical Layer is the first layer of the OSI model and is responsible for th
 
 The Data Link Layer is responsible for node-to-node data transfer and error detection and correction. It ensures that data transferred between two nodes is error-free and properly synchronized.
 
-- **Functions**: 
+- **Functions**:
   - Frame synchronization
   - Error detection and correction
   - Flow control
-- **Components**: 
+- **Components**:
   - Switches
   - Bridges
   - Network Interface Cards (NICs)
@@ -46,11 +48,11 @@ The Data Link Layer is responsible for node-to-node data transfer and error dete
 
 The Network Layer is responsible for data routing, packet forwarding, and logical addressing. It determines the best path for data to travel from the source to the destination.
 
-- **Functions**: 
+- **Functions**:
   - Logical addressing (IP addresses)
   - Routing
   - Packet forwarding
-- **Components**: 
+- **Components**:
   - Routers
   - Layer 3 switches
 
@@ -58,11 +60,11 @@ The Network Layer is responsible for data routing, packet forwarding, and logica
 
 The Transport Layer ensures reliable data transfer between end systems. It provides services such as connection establishment, flow control, error recovery, and data segmentation.
 
-- **Functions**: 
+- **Functions**:
   - Segmentation and reassembly
   - Connection control
   - Flow control
-- **Protocols**: 
+- **Protocols**:
   - TCP (Transmission Control Protocol)
   - UDP (User Datagram Protocol)
 
@@ -70,11 +72,11 @@ The Transport Layer ensures reliable data transfer between end systems. It provi
 
 The Session Layer manages and controls the connections between applications. It establishes, maintains, and terminates sessions between two communicating hosts.
 
-- **Functions**: 
+- **Functions**:
   - Session establishment, maintenance, and termination
   - Dialog control
   - Synchronization
-- **Examples**: 
+- **Examples**:
   - Remote procedure calls (RPCs)
   - Session management protocols
 
@@ -82,11 +84,11 @@ The Session Layer manages and controls the connections between applications. It 
 
 The Presentation Layer translates data between the application layer and the network format. It ensures that data is in a readable format for the application layer and can involve data encryption and compression.
 
-- **Functions**: 
+- **Functions**:
   - Data translation
   - Data encryption and decryption
   - Data compression and decompression
-- **Examples**: 
+- **Examples**:
   - Encryption protocols (SSL/TLS)
   - Character encoding (ASCII, EBCDIC)
 
@@ -94,11 +96,11 @@ The Presentation Layer translates data between the application layer and the net
 
 The Application Layer is the closest layer to the end user and interacts with software applications. It provides services for network applications such as email, file transfer, and web browsing.
 
-- **Functions**: 
+- **Functions**:
   - Network process to application
   - Resource sharing
   - Remote file access
-- **Protocols**: 
+- **Protocols**:
   - HTTP/HTTPS
   - FTP
   - SMTP
@@ -111,7 +113,7 @@ The Application Layer is the closest layer to the end user and interacts with so
 The `Practicals.pdf` file contains detailed specifications for practical exercises related to each OSI model layer. These practicals are designed to provide hands-on experience and deepen understanding of the theoretical concepts.
 
 - **Location**: `Practicals.pdf`
-- **Content**: 
+- **Content**:
   - Step-by-step instructions
   - Practical exercises for each OSI layer
   - Diagrams and examples
